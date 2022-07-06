@@ -1,4 +1,4 @@
-package fivesim
+package go_5sim
 
 import (
 	"encoding/json"

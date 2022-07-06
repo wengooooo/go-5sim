@@ -1,4 +1,4 @@
-package fivesim
+package go_5sim
 
 // AvailableCountries contains a list of available countries
 // WARNING: they may change at any time, so always checks the website first
