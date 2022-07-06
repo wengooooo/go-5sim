@@ -212,7 +212,7 @@ func (c *Client) GetRating() (float32, error) {
 
 // BuyActivationNumber performs a "buy activation number" operation by selecting country, operator and product name
 // and returns the operation information
-func (c *Client) BuyActivationNumber(country, operator, name, forwardingNumber string) (*ActivationOrder, error) {
+func (c *Client) GetNumber(country, operator, name, forwardingNumber string) (*ActivationOrder, error) {
 	// If country is empty, it will pass "any" to the service
 	if country == "" {
 		country = ANY
@@ -350,7 +350,7 @@ func (c *Client) baseOrderRequest(orderType string, orderID int) (*ActivationOrd
 }
 
 // CheckOrder checks the order status
-func (c *Client) CheckOrder(orderID int) (*ActivationOrder, error) {
+func (c *Client) GetCode(orderID int) (*ActivationOrder, error) {
 	return c.baseOrderRequest("check", orderID)
 }
 
